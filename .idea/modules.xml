@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DeepDiveInJava.iml" filepath="$PROJECT_DIR$/.idea/DeepDiveInJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DeepDiveInJava.iml" filepath="$PROJECT_DIR$/DeepDiveInJava.iml" />
     </modules>
   </component>
 </project>
