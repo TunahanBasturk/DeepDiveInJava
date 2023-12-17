@@ -71,7 +71,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Cümleyi Giriniz: ");
         String cumle = scanner.nextLine();
-        int boslukSayisi = 0;
+        System.out.print("Kelime giriniz: ");
+        String kelime = scanner.nextLine();
+    /*    int boslukSayisi = 0;
         for (int i=0;i<cumle.length();i++){
             if(cumle.charAt(i) ==' ' ){
                 boslukSayisi++;
@@ -83,9 +85,9 @@ public class Main {
 
         //İkinci Soru
 
-        System.out.print("Kelime giriniz: ");
+
         int c = 0;
-        String kelime = scanner.nextLine();
+     /*
         for (int j = 1; j <= kelime.length(); j++) {
             if (!(kelime.charAt(c) == kelime.charAt(kelime.length() - j))) {
                 System.out.println("Girilen Kelime Palindrom Değildir");
@@ -97,21 +99,29 @@ public class Main {
             }
             c++;
         }
-/// Üçüncü Soru ---------OLMADI
+        */
+/// Üçüncü Soru ---------
 
-     /*   String tekrarEdenKelime = "Java";
-
-        for(int k=0; k<=cumle.length(); k++ ){
-            for (int l=0; l<=tekrarEdenKelime.length(); l++){
-            if (cumle.charAt(k)==tekrarEdenKelime.charAt(l)) {
-
+ /*       String tekrarEdenKelime = "java";
+        int a = 0;
+        int tekrarEdenKelimeSayisi = 0;
+        for(int k=0; k<cumle.length(); k++ ){
+            if (cumle.charAt(k)==tekrarEdenKelime.charAt(a)) {
+                a++;
+                if (a==tekrarEdenKelime.length()){
+                    tekrarEdenKelimeSayisi++;
+                    a = 0;
+                }
+            }
+            else  {
+                a = 0;
             }
 
-            }
-        }*/
-
+        }
+        
+            System.out.println("Tekrar Eden Kelime Sayısı " + tekrarEdenKelimeSayisi);*/
         //  10. Soru
-        int sesliHarf = 0;
+  /*      int sesliHarf = 0;
         int sessizHarf = 0;
         for (int k=0; k<kelime.length();k++) {
             if (kelime.charAt(k)=='a' || kelime.charAt(k)=='e' || kelime.charAt(k)=='ı' || kelime.charAt(k)=='i'
@@ -126,24 +136,60 @@ public class Main {
         }
         System.out.println("Sesli Harf Sayısı: " + sesliHarf );
         System.out.println("Sessiz Harf Sayısı: " + sessizHarf );
-
+*/
         //   4. Soru
 
-        for (int z=1; z<= cumle.length();z++){
+ /*       for (int z=1; z<= cumle.length();z++){
             System.out.print(cumle.charAt(cumle.length()-z));
         }
 
-        //          7. Soru
-
-        for (int x=0; x<cumle.length();x++){
+     */   //          7. Soru
+  /*      System.out.println("");
+        System.out.print(String.valueOf(cumle.charAt(0)).toUpperCase());
+        for (int x=1; x<cumle.length();x++){
             if(cumle.charAt(x)==' '){
-              //  System.out.print(cumle.toUpperCase(x+1));
-                System.out.print(cumle.charAt(x+1));
+                System.out.print(" ");
+                System.out.print(String.valueOf(cumle.charAt(x+1)).toUpperCase());
+                x++;
             }
             else {
                 System.out.print(cumle.charAt(x));
             }
+        }*/
+// BEŞİNCİ SORU  YAPAMADIM
+        StringBuilder yeniKelime = new StringBuilder();
+        for (int i=0; i<kelime.length();i++) {
+            char karakter = kelime.charAt(i);
+            if (kelime.indexOf(karakter)==i){
+                yeniKelime.append(karakter);
+            }
+
+            }
+        System.out.println(yeniKelime);
+// 8. Soru ve  9. soru
+ /*       int kelimeUzunluk = 0;
+        int uzunKelime = 0;
+        int kelimeBaslangic = 0;
+        int a = 0;
+
+        for (int i = 0; i <= cumle.length(); i++) {
+            if (i == cumle.length() || cumle.charAt(i) == ' ') {
+                a++;
+                System.out.println(a+".kelime uzunluğu: "+kelimeUzunluk);
+                if (kelimeUzunluk > uzunKelime) {
+                    uzunKelime = kelimeUzunluk;
+                    kelimeBaslangic = i - uzunKelime;
+                }
+                kelimeUzunluk = 0;
+            } else {
+                kelimeUzunluk++;
+            }
         }
 
+
+        System.out.print("En uzun kelime: ");
+        for (int j = kelimeBaslangic; j < kelimeBaslangic + uzunKelime; j++) {
+            System.out.print(cumle.charAt(j));
+        }*/
     }
 }
